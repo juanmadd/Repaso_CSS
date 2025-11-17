@@ -1,0 +1,299 @@
+/*Se ha importado fuente Playfair para títulos y roboto para texto y botones para mejorar la legibilidad y estilo*/
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+body{
+    background-image: url('assets/biblioteca6.jpg'); /*Imagen de fondo de pantalla*/
+    background-repeat: no-repeat; /*Imagen de fondo solo se repite 1 vez*/
+    background-size: cover; /*Ajustamos tamaño de imagen de fondo mediante cover para que ocupe toda la pantalla*/
+}
+
+/*Estilo del navbar*/
+#nav{
+    height: 90px; /*Altura fija*/
+    width: 100%; /*Anchura coincide con el tamaño de la pantalla*/
+    color: white; /*Color de título para que resalte con el color de fondo y mejore la legibilidad*/
+    text-align: center; /*Alinear título al centro para mejor estética*/
+    font-weight: 900;   /*Más grosor de las letras para que resalte más*/
+    vertical-align: middle; /*Alinear el título verticalmente*/
+    background: #005b60; /*Color de fondo del navbar*/
+    margin-top: -22px;  /*Posicionar navbar para que rellene toda la parte superior*/
+    padding-right: 17px;
+    margin-left: -10px;
+}
+
+#nav h1{
+    font-family: "Playfair Display", serif; /*Títulos usa fuente Playfair Display*/
+}
+
+/*Botones del navbar*/
+#menu button{
+    background: none;      /*Sín fondo y sin borde, solo se muestran las letras del botón para un mejor diseño*/ 
+    border: none;
+    color: white;       /*Color de letras para mejor constraste con el fondo del navbar*/
+    font-weight: 800;
+    font-family: "Roboto", sans-serif;
+}
+
+/*Al pasar el ratón por encima del botón cambia el cursor para que podamos pulsar, se usa la pseudoclase hover para ello, indicando así que es un botón*/
+#menu button:hover{
+    cursor: pointer;
+}
+
+/*Sección de filtros y productos*/
+section{
+    display: flex;          /*Se posiciona como flex y en fila para que se muestren los filtros y al lado los productos*/
+    flex-direction: row;
+    gap: 15px;              /*Espaciado de 15 pixeles entre los componentes para mejorar la legibilidad*/
+}
+
+/*Filtros*/
+
+#filtros{
+    display: flex;              /*Posicionar como flex y en columna para que los elementos se muestren uno encima de otro*/
+    flex-direction: column;
+    width: 35%;                 /*Anchura de los filtros, ocupa un 35% de section*/
+    margin-top: 40px;
+    margin-bottom: 15px;
+    gap: 10px;                  /*Espaciado entre elementos de filtros para mejorar la legibilidad*/
+    padding-bottom: 30px;
+    margin-right: 5px;
+    color: white;       /*Color de letras de filtros para un mejor contraste*/
+    background: rgba(33, 33, 33, 0.35); /*Color de fondo de filtros*/
+    backdrop-filter: blur(10px); /*aplica un desenfoque al contenido que hay detrás del elemento, viendo el elemento como semitransparente mejorando la estética del contenedor*/
+    border-radius: 16px;       /*Bordes redondeados para un estilo más atractivo visualmente*/
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /*Sombreado*/
+}
+
+
+/*Estilo de input de filtros*/
+#filtros input{
+    width: 80%;
+    border-radius: 12px;
+    margin-left: 10px;
+    padding: 7px 9px;
+    border: 1px solid rgba(0, 0, 0, 0.15);  
+    background: rgba(255, 255, 255, 0.85);  
+    font-size: 0.95rem;     /*Tamaño de fuente. Indica que el tamaño de letra será 0.95 veces el tamaño de la fuente raíz (16px*0.95)*/
+    font-family: "Roboto", sans-serif;
+}
+
+/*Si el input es de tipo texto, se aplica un color de borde naranja usando selectores de atributos, diferenciando así los input de distinto tipo*/
+#filtros input[type="text"]{
+    border-color: orange;
+}
+
+/*Si es de tipo numerico se aplica un color verde oscuro usando selectores de atributos diferenciando así los input de distinto tipo*/
+#filtros input[type="number"]{
+    border-color: #005b60;
+}
+
+/*Estilos para h1 y labels de filtro*/
+#filtros h1{
+    font-family: "Playfair Display", serif;
+    text-align: center;
+    font-weight: 800;
+}
+
+#filtros label{
+    margin-left: 12px;
+    font-weight: 600;
+    font-family: "Roboto", sans-serif;
+}
+
+/*Estilo de sección de productos*/
+#seccionProductos{
+    text-align: center; /*Texto se centra*/
+    width: 100%;        
+}
+
+#seccionProductos #botonesOrdenar{
+    text-align: end;        /*Ponemos botones de ordenación a la derecha*/
+    margin-right: 15px;
+    margin-bottom: 15px;
+}
+
+/*Al pasar el ratón por el botón de ordenar se cambia el cursor, se usa la pseudoclase hover para ello, indicando de esta forma que son botones*/
+#botonesOrdenar button:hover{
+    cursor: pointer;
+}
+
+#seccionProductos{    
+    display: flex;
+    flex-direction: row;    /*Elementos se posicionan en forma de fila para mejorar la visibilidad*/
+}
+
+/*Estilo del grid de productos*/
+
+#gridProd{
+    background: rgba(33, 33, 33, 0.35); /*Color de fondo*/
+    backdrop-filter: blur(10px);    /*Estilo difuminado para un estilo más atractivo visualmente*/
+    border-radius: 16px;    /*Bordes redondeados*/
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);  /*Sombreado*/
+    margin-top: 40px;   /*Aplicamos márgenes y padding para mejor posicionamiento del contenedor*/
+    margin-bottom: 15px;
+    padding-bottom: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+/*Filas se posicionan como row*/
+#seccionProductos #gridProd .fila{
+    display: flex;
+    flex-direction: row;
+}
+
+
+/*Estilo de título "Productos"*/
+#tituloProductos{
+    font-family: "Playfair Display", serif;
+    color: white;
+    font-weight: 800;   /*Grosor mayor para destacar el título*/
+}
+
+/*Estilos tarjetas productos*/
+.prod{
+    height: 380px;  /*Altura y anchura fija*/
+    width: 330px;
+    border: 3px solid orange;   
+    margin-right: 15px;
+    margin-bottom: 15px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 14px;    
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
+}
+
+/*Estilo del contenedor de imagen*/
+.imagenProd{
+    height: 70%;    /*Ocupa un 70% de la altura de la tarjeta*/
+    width: 100%;    /*Se posiciona a lo ancho de la tarjeta*/
+    align-self: center; /*Contenedor de imagen centrada*/
+}
+
+/*Estilo de la imagen*/
+.imagenProd img{
+    margin-top: 15px;
+    height: 200px;
+    width: 150px;
+}
+
+/*Estilo de contenedor que contienen datos del producto*/
+.datosProd{
+    padding: 12px 16px;
+    width: 85%; 
+    height: 60px;   /*Altura fija para posicionar correctamente botón de añadir al carrito*/
+    text-align: left;   /*Letras alineadas a la izquierda para facilitar la lectura al usuario*/
+    margin-top: -25px;  /*Posicionar contenedor*/
+    margin-bottom: 20px;
+}
+
+/*Estilo del nombre del producto*/
+.datosProd .nombreProd{
+  margin: 0 0 8px;
+  font-size: 20.8px;    /*Letras más grandes y bold para que el nombre destaque*/
+  font-weight: bold;
+  color: #000;
+  display: inline-block; /*Si el nombre ocupa más de una línea lo ocultamos mediante elipsis (3 puntos)*/
+  white-space: nowrap;  /*para que no desborde ni afecte al posicionamiento de los demás elementos*/
+  overflow: hidden;    
+  text-overflow: ellipsis;
+  max-width: 290px;
+  font-family: "Roboto", sans-serif;    /*Texto usa fuente Roboto*/
+}
+
+/*Estilo del autor del producto*/
+.datosProd .autorProd{
+  margin: 0 0 8px;  
+  font-size: 19.2px;    /*Tamaño y color distinto al nombre del producto para diferenciarlo*/
+  color: #575656;
+  font-family: "Roboto", sans-serif;
+}
+
+.precioProd{
+  margin: 0 0 8px;
+  font-size: 19.2px;    /*Tamaño y grosor distinto al nombre del producto para diferenciarlo*/
+  color: #000;
+  font-weight: 800;
+  font-family: "Roboto", sans-serif;
+}
+
+
+/*Añadimos despues del precio el símbolo del euro mediante la pseudoclase after ahorrando la escritura del símbolo en las tarjetas de productos*/
+.precioProd::after{
+    content: ' € ';
+}
+
+/*Si el producto tiene la clase prodNuevo, le añadimos antes del nombre
+"nuevo" mediante la pseudoclase before, de esta forma tan solo hay que aplicar 
+este estilo cuando se añade un nuevo producto*/
+.prodNuevo::before{
+    content: ' Nuevo!! ';
+    color: orange;
+}
+
+/*Contenedor del botón de añadir al carrito*/
+.divBoton{
+    width: 100%; /*Se ajusta a lo ancho de la tarjeta de producto*/
+}
+
+/*Estilo de botones*/
+.estiloBoton{
+    background: #005b60;
+    color: #fff;
+    border: none;
+    padding: 7px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+/*Al pasar el ratón por encima del botón cambiará el color de fondo por uno más oscuro, se usa la pseudoclase hover para ello, indicando así que es un botón*/
+.estiloBoton:hover {
+    background: rgb(7, 50, 49);
+}
+
+
+/*Estilos para productos en oferta, cambiamos el color del borde para diferenciarlo del resto*/
+#prodOferta{
+    border: 3px solid green;
+}
+
+/*Span para informar un producto en oferta*/
+.infoProdOferta{
+    background-color: green;
+    color: white;
+    font-weight: 700;
+    font-family: "Roboto", sans-serif;
+}
+
+/*Estilo del footer*/
+footer{
+    width: 100%;    /*Se ajusta a lo ancho de la página*/
+    height: 150px; /*Altura fija*/
+    background-color: #2d2d32; /*Color de fondo*/
+    display: flex;  /*Se posiciona mediante flex y elementos se muestran uno al a lado del otro*/
+    flex-direction: row;
+    padding-right: 17px;    /*Mejorar posicionamiento*/
+    margin-left: -10px;
+    margin-bottom: -10px;
+    align-content: center;  /*Centramos elementos*/
+    justify-content: center;
+    gap: 25px;  /*Espaciados de 25 píxeles*/
+}
+
+/*Añadimos espaciado interior a los div de footer para separarlos de la parte superior*/
+footer div{
+    padding-top: 30px;
+}
+
+/*Quitamos el subrayado a los enlaces y cambiamos color*/
+footer div a{
+    text-decoration: none;
+    color: rgb(175,175,179);
+    font-family: "Roboto", sans-serif;
+}
+
+
+
+

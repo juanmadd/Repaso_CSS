@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
+
+.selector-clase{
+    font-size: large;
+}
+
+/*[class^="se"]{ Clases que empiecen por se
+    color: red;
+}
+
+[class*="r-cla"]{ Clases que contengan r-cla
+    color: blue;
+}
+
+[class$="e"]{ Clases que terminen por e
+    color: violet;
+}*/
+
+#primeraEtiquetaH1{
+    color: red
+}
+
+input[type="text"]{
+    border-color: red;
+}
+
+input[type="number"]{
+    border-color: blue;
+}
+
+*{color: orange;}
+
+div > *{
+    color: blue;
+} /*Elementos dentro de un div*/
+
+.tag-div{
+    color: crimson;
+}
+
+.tag-div h2, p{
+    color: inherit;
+} /*Seleccionar h2  dentro de un div, no es necesario > */
+
+.tag-div h2 + p{
+    color: brown;
+    font-size: 30px;
+} /*Seleccionar hermando directo (el que sigue) de h2*/
+
+.tag-div h2 ~ p{
+    color: cyan;
+    font-size: 30px;
+} /*Seleccionar todos los hermanos (los elementos que sigue) de h2*/
+
+
+/*CSS funciona en cascada, determina que estilo se le aplica a un mismo elemento, se quedaría
+con la última propiedad definida*/
+
+/*Especificidad: Se aplica el estilo más específico. Menor especificidad: selector universal (*),
+selector universal modifica color de por defecto. Peso: 0.
+
+después elementos y pseudo-elementos (ej: h1). Peso: 1
+
+después clases, atributos y pseudo-clases. Peso: 10
+
+después id (#). Peso: 100
+
+estilos en línea (se aplican en etiqueta con style). Peso: 1000
+
+!import gana a todos
+
+*/
+
+/*-------------------------------------------------------------------------------------------------------------------------------------------------*/
+.title:hover{ /*Al pasar el ratón por encima cambia el color y el tamaño*/
+    color: red;
+    font-size: large;
+}
+
+.touch:active + h3{ /*Cambia el color al presionar el botón con clase touch, al dejar de presionar vuelve a tener el estilo que tenía*/
+    color: blue;
+}
+
+.input-focus:focus + h3{ /*Cambia el color del texto cuando se hace foco en el input con clase input-focus*/
+    color: red;
+}
+
+.list-items li:nth-child(even){ /*Cambia el estilo del 2 elemento de la lista, se usa con un elemento con hijos. Even => pares, odd => impares*/
+    color: blueviolet;
+}
+
+.list-items li:first-child{ /*Cambia el estilo del primer elemento de la lista, se usa con un elemento con hijos. last-child será para el último*/
+    color: darkblue;
+}
+
+.list-items li:first-of-type{} /*Selecciona el primero de ese tipo (en este caso li), existe last-of-type*/
+
+.list-items li:nth-last-of-type(2){} /*Selecciona el segundo de ese tipo empezando por debajo (en este caso li)*/
+
+
+.list-items li::before{ /*Antes de cada elemento se incluye el contenido indicado. After => Después de cada li*/
+    content: ':) ';
+}
+
+h2::first-letter{ /*Cambia el estilo de la primera letra*/
+    font-size: 40px;
+    color: black;
+}
+
+/*------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+.color-red{
+    height: 1000px;
+    width: 500px;
+    color: white;
+    background-image: url('./assets/Captura2.PNG');
+    background-position: bottom; /*Porción que se muestra*/
+    background-repeat: no-repeat; /*No repetir imagen*/
+    background-size: cover; /*Contain se ajusta a dimensiones de imagen; cover: ajusta la imagen al container o padre*/
+    background-attachment: scroll; /*Imagen se mantiene fija o sigue al scroll*/
+}
+
+/*---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*Text-align: alinea el texto de forma horizontal. Por defecto: start, end: a la derecha, center: centro*/
+
+/*Descargar fuentes: https://fonts.google.com/ */
+
+body{
+    font-family: Arial, Helvetica, sans-serif; /*Tipografía, si no se carga Arial, tiene como alternativa Helvetica, y si no puede, sans-serif*/
+}
+
+.nuevoTitulo{
+    font-size: 80px; /*Tamaño de la fuente del texto*/
+    text-align: center;
+    text-decoration: underline; /*Decoraciones al texto (tachar, subrayar...)*/
+    text-decoration-color: red;
+}
+
+.parrafo{
+    font-size: 30px;
+    font-weight: 700; /*Grosor de los carácteres del texto. Mayor es 900, normal: 100*/
+    font-style: normal;
+    line-height: 40px; /*Altura de la línea del texto, espacidado vertical*/
+    font-family: "Dancing Script", cursive;
+    background-color: lightyellow;
+    color: navy;
+}

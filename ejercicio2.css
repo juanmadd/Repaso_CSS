@@ -1,0 +1,375 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+
+
+html{
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+*{
+    box-sizing: inherit;
+}
+
+body{
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+}
+
+.header{
+    height: 100vh;
+    background-color: rgba(0, 63, 71, 0.8); /*Valor del final es para dar transparencia*/
+    background-image: url('./assets/desarrollador.jpg');
+    background-position: center bottom; 
+    background-size: cover;
+    background-blend-mode: multiply; /*Mezclar imagenes o colores. Multiply es dar capa de transparencia*/
+    background-attachment: fixed ;
+    position: relative;
+}
+
+.header .header_nav{
+    margin: 0 auto;
+    width: 60%;
+    padding: 30px;
+    position: fixed;
+    right: 0;
+    top: 30px;
+    border-bottom-left-radius: 30px;
+}
+
+.header .header_title{
+    top: 45px;
+    left: 80px;
+    color: white;
+    font-family: 'Righteous';
+    font-size: 2em;
+    position: fixed;
+    right: 0;
+    top: 30px;
+
+}
+
+.header_nav ul{
+    list-style: none;
+}
+
+.header_nav ul li{
+    display: inline-block;
+    margin-right: 10%;
+}
+
+.header_nav ul li a{
+    text-decoration: none;
+    color: gray;
+    font-size: 1rem;
+}
+
+.header_nav ul li a:hover{
+    color: white;
+    font-weight: 700;
+}
+
+
+.block{
+    background-color: red;
+}
+
+.line{
+    background-color: blue;
+}
+
+/*Padding: Distancia entre contenido y borde de caja
+Context-box: Tamaño de caja en total depende de lo que sume contenido, padding y border. Limita a altura y anchura indicada*/
+
+.content_main{
+    width: 100%;
+    height: 400vh;
+}
+
+.content_main .section{
+    width: 100%;
+    height: 100vh;
+    padding: 10px;
+    position: relative;
+}
+
+.header .header_title{
+    position: absolute;
+    top: 45px;
+    left: 80px;
+    color: gray;
+    font-family: 'Righteous';
+    font-size: 2em;
+    position: fixed;
+}
+
+.content_main .section:nth-child(even){
+    background-color: rgb(0, 25, 28);
+}
+
+.content_main .section:nth-child(even) h2{
+    color: white;
+}
+
+.content_main .section h2{
+    color: rgb(0, 25, 28);
+    text-align: center;
+    font-size: 2em;
+    font-family: 'Righteous';
+    margin-bottom:  40px;
+}
+
+.link_up{
+    width: 40px;
+    height: 40px;
+    background-color: rgba(0, 63, 71, 0.8);
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    color: white;
+    font-size: 1.5em;
+    padding: 5px;
+    border-radius: 10px;
+    z-index: 1000;
+}
+
+.header .header_description{
+    position: relative;
+    top: 30%;
+    width: 25%;
+    height: 350px;
+    background-color: rgba(0, 63, 71, 0.8);
+    border-radius: 10px;
+    float: right;
+    margin-right: 300px;
+    backdrop-filter: blur(6px);
+}
+
+.header .header_description img{
+    width: 350px;
+    height: 230px;
+    clip-path: circle();
+    float: left;
+    shape-outside: circle();
+    margin-right: 45px;
+    margin-left: 10px;
+    margin-top: 40px;
+}
+
+.header .header_description span{
+    color: white;
+    display: block;
+    position: absolute;
+    bottom: 40px;
+    width: 100%;
+    left: 55px;
+}
+
+.header_name{
+    position: relative;
+    top: 40%;
+    width: auto;
+    float: left;
+    height: auto;
+    margin-left: 80px;
+}
+
+.header_name h4{
+    font-size: 3em;
+    font-weight: 100;
+    color: rgb(224, 224, 224);
+}
+
+.header_name h1{
+    font-size: clamp(3vw, 5vw, 8vw);
+    color: white;
+}
+
+.header_name h1::first-letter{
+    background-color: rgba(0, 63, 71, 0.8);
+    padding: 0 5px;
+    border-radius: 10px;
+}
+
+.header .header_networks{
+    position: fixed;
+    top: 30%;
+    right: 1px;
+    width: 50px;
+    height: auto;
+    border: 1px solid white;
+    padding: 10px;
+    border-radius: 8px 0 0 8px;
+    background-color: rgba(0, 63, 71, 0.95);
+    backdrop-filter: blur(6px);
+    box-shadow: 3px 5px 10px #ccc;
+    z-index: 1000;
+}
+
+.header .header_networks a i{
+    color: white;
+    margin-bottom: 33px;
+    font-size: 1.6em;
+}
+
+.grid-projects{
+    width: 70%;
+    margin: 0 auto;
+    max-width: 70%;
+    min-height: 50%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-rows: repeat(auto, 1fr);
+    gap: 20px;
+}
+
+.grid-projects .g-items{
+    border-radius: 10px;
+    position: relative;
+    background-size: contain;
+}
+
+.grid-projects .g-items:first-of-type{
+    background-image: url('./assets/movil.png');
+}
+
+.grid-projects .g-items:nth-of-type(2){
+    background-image: url('./assets/escritorio.png');
+}
+
+.grid-projects .g-items:nth-of-type(3){
+    background-image: url('./assets/web.png');
+}
+
+.grid-projects .g-items .overlay{
+    position: absolute;
+    bottom: 0;
+    height: 50%;
+    background-color: rgba(0, 63, 71, 0.95);
+    width: 100%;
+    color: white;
+    font-size: 2em;
+    display: grid;
+    place-items: center;
+    border-radius: 30px 30px 0 0;
+}
+
+/*
+Inline: Ocupa tan solo el tamaño necesario, no se puede cambiar anchura ni altura
+Inline-block: Ocupa el tamaño necesario pero se puede modificar anchura y altura
+Block: Ocupa todo el ancho de pantalla
+Static: Elementos siguen el flujo normal dado
+Absolute: Ignora el flujo normal (elemento va a ser libre y se posiciona de forma absoluta respecto al contenedor
+Relative: Si queremos ubicar un elemento hijo dentro del padre, tenemos que colorcar en padre position: relative.
+    Para alejar el contenedor usamos left, bottom, top, right.
+    Todos elementos hijos del padre con relative se posiciona entorno a él.
+    Right: 0 => No estará alejado del lado derecho. 
+
+z-index: Nivel de profundidad de un elemento sobre otro elemento
+*/
+
+/*Media querys*/
+/*
+      Breakpoints
+width <= 688 px => Móviles pequeños
+width <= 922 px => Tablets pequeñas y moviles grandes
+width <= 1312 px => Monitores pequeños
+width >= 1312 px => Monitores grandes
+
+------------------------------
+
+width <= 480 px => Móviles pequeños
+481 px <= width <= 768 px => Tablets pequeñas y moviles grandes
+769 px <= width <= 1279 px => Monitores pequeños
+width >= 1280 px => Monitores grandes
+
+*/
+@media (width <= 1344px){
+    .header .header_description{
+        display: none;
+    }
+
+    .header{
+        background-image: url('./assets/men.png');
+    }
+
+    /*.header .header_name h1{
+        font-size: 6vw;
+    }*/
+
+    .header .header_name h4{
+        font-size: 3.5vw;
+    }
+
+    .header .header_name{
+        width: 100%;
+        margin-top: 50px;
+    }
+
+    .grid-projects{
+        min-height: 80%;
+        align-items: start;
+        margin-bottom: 70px;
+    }
+
+    .grid-projects .g-items{
+        min-height: 80% ;
+        border-radius: 10px;
+    }
+
+    .grid-projects .g-items .overlay{
+        height: 100%;
+        border-radius: 0;
+        background-color: rgba(0, 63, 71, 0.95);
+    }
+}
+
+@media screen and (width <= 480px){
+    .header .header_nav{
+        width: 100%;
+        margin-top: 50px;
+    }
+
+    .header .header_nav ul li{
+        font-size: 1.5em;
+    }
+
+    .information{
+        width: 100%;
+        height: 80%;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .information .information_image{
+        width: 80%;
+        margin-bottom: 80px;
+    }
+
+    .information p{
+        font-size: 3.8vw;
+        width: 90%;
+    }
+
+    .header .container_nav .header_nav ul li a{
+        font-size: 20px;
+    }
+
+    .content_main .sobremi .information p{
+        line-height: 28px;
+        letter-spacing: 2px;
+    }
+}
+
+@media (prefers-color-scheme: dark){
+    body{
+        background-color: rgb(0, 25, 28);
+    }
+
+    .content_main .section h2{
+        color: white
+    }
+}
+

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Tienda de libros</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='ejercicio1.css'>
+</head>
+<body>
+    <header>
+        <div id="nav">
+            <h1>Tienda de libros</h1>
+            <div id="menu">
+                <button>Todos los productos</button>
+                <button>Productos más vendidos</button>
+                <button>Categorias</button>
+                <button>Iniciar sesión</button>
+            </div>
+        </div>
+    </header>
+    <section>
+        <div id="filtros">
+            <h1>Filtros</h1>
+
+            <label for="inputBusc">Buscar por Nombre:</label>
+            <input id="inputBusc" type="text">
+
+            <label for="inputBuscT">Buscar por Autor:</label>
+            <input id="inputBuscT" type="text">
+
+            <label for="inputPrecioMin">Precio Mínimo:</label>
+            <input id="inputPrecioMin" type="number">
+
+            <label for="inputPrecioMax">Precio Máximo:</label>
+            <input id="inputPrecioMax" type="number">
+        </div>
+        <div id="seccionProductos">
+            <div id="gridProd">
+                <h1 id="tituloProductos">Productos</h1>
+
+                <div id="botonesOrdenar">
+                    <button class="estiloBoton">Alfabetico Asc</button>
+                    <button class="estiloBoton">Alfabetico Desc</button>
+                    <button class="estiloBoton">Precio Asc</button>
+                    <button class="estiloBoton">Precio Desc</button>
+                    <button class="estiloBoton">Valoracion</button>
+                </div>
+                <!--3 filas, en cada fila hay 3 productos-->
+                <div class="fila"> 
+                    <div class="prod">
+                        <div class="imagenProd">
+                            <img src="assets/portada1.jpg" alt="portada crimen y castigo">
+                        </div>
+                        <div class="datosProd"> <!--Se añade title a nombre del libro para que cuando el tamaño del nombre supere la línea aparezca si se pasa el ratón por encima-->
+                            <span class="nombreProd" title="Crimen y castigo">Crimen y castigo</span><br>
+                            <span class="autorProd">Fiódor Dostoyevski</span><br>
+                            <span class="precioProd">24,99</span>
+                        </div>
+                        <div class="divBoton">
+                            <button class="estiloBoton">Añadir</button>
+                        </div>
+                    </div>
+                    <!--Se destaca este producto en oferta para probar estilos mediante id a la vez que usa una clase-->
+                    <div class="prod" id="prodOferta">
+                        <div class="imagenProd">    <!--Al tener estilo distinto al resto se usa estilos en línea para modificar el posicionamiento de la imagen-->
+                            <img style="margin-top: 15px;" src="assets/portada2.jpg" alt="portada ciudad y los perros">
+                        </div>
+                        <div class="datosProd">
+                            <span class="nombreProd" title="La ciudad y los perros">La ciudad y los perros</span><br>
+                            <span class="autorProd"> Mario Vargas Llosa</span><br>
+                            <span class="precioProd">19,99</span>
+                            <span class="infoProdOferta">Oferta durante 24h</span>
+                        </div>
+                        <div class="divBoton">
+                            <button class="estiloBoton">Añadir</button>
+                        </div>
+                    </div>
+                    <div class="prod">
+                        <div class="imagenProd">
+                            <img src="assets/portada3.jpg" alt="portada cien años de soledad">
+                        </div>
+                        <div class="datosProd">
+                            <span class="nombreProd" title="Cien años de soledad">Cien años de soledad</span><br>
+                            <span class="autorProd">Gabriel García Márquez</span><br>
+                            <span class="precioProd">25,99</span>
+                        </div>
+                        <div class="divBoton">
+                            <button class="estiloBoton">Añadir</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="fila">
+                    <div class="prod">
+                        <div class="imagenProd">
+                            <img src="assets/portada4.jpg" alt="portada harry potter">
+                        </div>
+                        <div class="datosProd"> <!--Para los productos nuevos se aplican 2 clases al nombre, la general y otra para indicar estilo de un producto recién añadido-->
+                            <span class="prodNuevo nombreProd" title="Harry potter y la piedra filosofal">Harry potter y la piedra filosofal</span><br>
+                            <span class="autorProd">J.K. Rowling</span><br>
+                            <span class="precioProd">11,99</span>
+                        </div>
+                        <div class="divBoton">
+                            <button class="estiloBoton">Añadir</button>
+                        </div>
+                    </div>
+                    <div class="prod">
+                        <div class="imagenProd">
+                            <img src="assets/portada5.jpg" alt="portada don quijote">
+                        </div>
+                        <div class="datosProd">
+                            <span class="nombreProd">Don Quijote de la Mancha</span><br>
+                            <span class="autorProd" title="Miguel de Cervantes">Miguel de Cervantes</span><br>
+                            <span class="precioProd">15,99</span>
+                        </div>
+                        <div class="divBoton">
+                            <button class="estiloBoton">Añadir</button>
+                        </div>
+                    </div>
+                    <div class="prod">
+                        <div class="imagenProd">
+                            <img src="assets/portada6.jpg" alt="portada juego de tronos">
+                        </div>
+                        <div class="datosProd">
+                            <span class="nombreProd" title="Canción de hielo y fuego 1. Juego de tronos">Canción de hielo y fuego 1. Juego de tronos</span><br>
+                            <span class="autorProd">George R.R. Martin</span><br>
+                            <span class="precioProd">19,99</span>
+                        </div>
+                        <div class="divBoton">
+                            <button class="estiloBoton">Añadir</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="fila">
+                    <div class="prod">
+                        <div class="imagenProd">
+                            <img src="assets/portada7.jpg" alt="portada hamlet">
+                        </div>
+                        <div class="datosProd">
+                            <span class="nombreProd" title="Hamlet">Hamlet</span><br>
+                            <span class="autorProd">William Shakespeare</span><br>
+                            <span class="precioProd">12,99</span>
+                        </div>
+                        <div class="divBoton">
+                            <button class="estiloBoton">Añadir</button>
+                        </div>
+                    </div>
+                    <div class="prod">
+                        <div class="imagenProd">
+                            <img src="assets/portada8.jpg" alt="portada retrato de dorian gray">
+                        </div>
+                        <div class="datosProd">
+                            <span class="prodNuevo nombreProd" title="El retrato de Dorian Gray">El retrato de Dorian Gray</span><br>
+                            <span class="autorProd">Oscar Wilde</span><br>
+                            <span class="precioProd">15,99</span>
+                        </div>
+                        <div class="divBoton">
+                            <button class="estiloBoton">Añadir</button>
+                        </div>
+                    </div>
+                    <div class="prod">
+                        <div class="imagenProd">
+                            <img src="assets/portada9.jpg" alt="portada la iliada">
+                        </div>
+                        <div class="datosProd">
+                            <span class="prodNuevo nombreProd" title="La Iliada">La Iliada</span><br>
+                            <span class="autorProd">Homero</span><br>
+                            <span class="precioProd">18,99</span>
+                        </div>
+                        <div class="divBoton">
+                            <button class="estiloBoton">Añadir</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div>
+            <a href="#">Mapa del sitio</a>
+        </div>
+        <div>
+            <a href="#">Sobre nosotros</a>
+        </div>
+        <div>
+            <a href="#">Contactar</a>
+        </div>
+        <div>
+            <a href="#">Politica de cookies</a>
+        </div>
+    </footer>
+</body>
+</html>
