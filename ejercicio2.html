@@ -9,27 +9,18 @@
 </head>
 <body>
     <header class="header" id="header">
-        <h2 class="header_title">Juanma</h2> 
-        <nav class="header_nav">
-            <ul class="list">
-                <li><a href="#">Inicio</a></li>
-                <li><a href="#Sobremi">Sobre mi</a></li>
-                <li><a href="#proyectos">Proyectos</a></li>
-                <li><a href="#contacto">Contacto</a></li>
-                <li><a href="#habilidades">Habilidades</a></li>
-            </ul>
-        </nav>
-        <aside class="header_networks">
-            <a href="">
-                <i class="fa-brands fa-instagram"></i>
-            </a>
-            <a href="">
-                <i class="fa-brands fa-facebook"></i>
-            </a> 
-            <a href="">
-                <i class="fa-brands fa-github"></i>
-            </a>
-        </aside>
+        <div class="container_nav">
+            <h2 class="header_title">Juanma</h2> 
+            <nav class="header_nav">
+                <ul class="list">
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#Sobremi">Sobre mi</a></li>
+                    <li><a href="#habilidades">Habilidades</a></li>
+                    <li><a href="#proyectos">Proyectos</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
         <div class="header_name">
             <h4>
                 Hola, Yo soy
@@ -37,6 +28,20 @@
             <h1>
                 Juanma Díaz
             </h1>
+            <aside class="networks">
+                <a href="">
+                    <i class="fa-brands fa-linkedin"></i>
+                </a>
+                <a href="">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="">
+                    <i class="fa-brands fa-facebook"></i>
+                </a> 
+                <a href="">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+            </aside>
         </div>
         <div class="header_description">
             <img src="./assets/men.png" alt="perfil">
@@ -46,32 +51,124 @@
     <main class="content_main">
         <section id="Sobremi" class="section sobremi">
             <h2>Sobre mi</h2>
+            <div class="information">
+                <figure class="information_image">
+                    <img src="./assets/front.jpg" alt="dev">
+                </figure>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo porro molestiae dolorem excepturi eos nam omnis vel! Quaerat tempora modi quo. Similique ea inventore voluptatibus unde commodi deleniti totam repudiandae.
+                </p>
+            </div>
+        </section>
+        <section id="habilidades" class="section habilidades">
+            <h2>Habilidades </h2>
+
+            <article class="container_habilidades">
+                <div class="habilidad_html">
+                    <span>HTML</span>
+                    <div class="progreso">
+                        <div class="barra"></div>
+                    </div>
+                </div>
+
+                <div class="habilidad_css">
+                    <span>CSS</span>
+                    <div class="progreso">
+                        <div class="barra"></div>
+                    </div>
+                </div>
+
+                <div class="habilidad_js">
+                    <span>JavaScript</span>
+                    <div class="progreso">
+                        <div class="barra"></div>
+                    </div>
+                </div>
+
+                <div class="habilidad_php">
+                    <span>PHP</span>
+                    <div class="progreso">
+                        <div class="barra"></div>
+                    </div>
+                </div>
+
+                <div class="habilidad_mySQL">
+                    <span>MySQL</span>
+                    <div class="progreso">
+                        <div class="barra"></div>
+                    </div>
+                </div>
+            </article>
         </section>
         <section id="proyectos" class="section proyectos">
             <h2>Proyectos</h2>
             <div class="grid-projects">
                 <div class="project-1 g-items">
-                    <div class="overlay">
-                        Project 1
+                    <div class="card">
+                        <div class="front">
+                            <img src="assets/movil.png" alt="proyecto móvil">
+                            <div class="overlay">
+                                Project 1
+                            </div>
+                        </div>
+                        <div class="back">
+                            <div class="description">
+                                <h2>descripción del proyecto 1</h2>
+                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consectetur nisi sint, corporis molestias ullam eligendi eos quia dignissimos voluptatum repellat voluptatibus sunt ipsa accusantium cupiditate possimus impedit rerum harum sequi.</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="project-2 g-items">
-                    <div class="overlay">
-                        Project 2
+                    <div class="card">
+                        <div class="front">
+                            <img src="assets/web.png" alt="proyecto web">
+                            <div class="overlay">
+                                Project 2
+                            </div>
+                        </div>
+                        <div class="back">
+                            <div class="description">
+                                <h2>descripción del proyecto 2</h2>
+                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consectetur nisi sint, corporis molestias ullam eligendi eos quia dignissimos voluptatum repellat voluptatibus sunt ipsa accusantium cupiditate possimus impedit rerum harum sequi.</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="project-3 g-items">
-                    <div class="overlay">
-                        Project 3
+                    <div class="card">
+                        <div class="front">
+                            <img src="assets/escritorio.png" alt="proyecto escritorio.png">
+                            <div class="overlay">
+                                Project 3
+                            </div>
+                        </div>
+                        <div class="back">
+                            <div class="description">
+                                <h2>descripción del proyecto 3</h2>
+                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consectetur nisi sint, corporis molestias ullam eligendi eos quia dignissimos voluptatum repellat voluptatibus sunt ipsa accusantium cupiditate possimus impedit rerum harum sequi.</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
         <section id="contacto" class="section contacto">
             <h2>Contacto</h2>
-        </section>
-        <section id="habilidades" class="section habilidades">
-            <h2>habilidades </h2>
+            <form class="contact_form">
+                <div class="form_user">
+                    <label for="name">Nombre</label>
+                    <input type="text" id="name">
+                </div>
+                <div class="form_email">
+                    <label for="email">Email</label>
+                    <input type="email" id="email">
+                </div>
+                <div class="form_message">
+                    <label for="message">Mensaje</label>
+                    <textarea id="message"></textarea>
+                </div>
+            </form>
         </section>
     </main>
     <a href="#header" class="link_up">&#8593</a>
